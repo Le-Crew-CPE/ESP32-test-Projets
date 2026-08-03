@@ -2,7 +2,7 @@
 
 
 int couleur = 0;
-const int DELAY = 200;
+const int DELAY = 1000;
 
 void afficherCouleur(int c) {
 
