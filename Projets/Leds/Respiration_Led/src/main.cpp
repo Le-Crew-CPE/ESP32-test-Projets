@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-const int LUMINOSITE = 255;   // 0-255 — la LED intégrée est éblouissante à fond
+const int LUMINOSITE = 20;   // 0-255 — la LED intégrée est éblouissante à fond
 const int PAS = 20;          // ms entre deux teintes
 
 // Position 0-255 sur la roue des couleurs -> R, G, B
@@ -20,11 +20,13 @@ void roueCouleur(uint8_t pos, uint8_t &r, uint8_t &g, uint8_t &b) {
 
 void afficherCouleur(uint8_t r, uint8_t g, uint8_t b) {
   rgbLedWrite(RGB_BUILTIN, r * LUMINOSITE / 255, g * LUMINOSITE / 255, b * LUMINOSITE / 255);
+  
 }
 
 void setup() {
   Serial.begin(115200);
   Serial.println("Cycle de couleurs");
+  
 }
 
 void loop() {
